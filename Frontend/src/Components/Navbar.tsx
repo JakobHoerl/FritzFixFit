@@ -46,7 +46,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const handleLogout = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/logout");
+      const response = await axios.post(
+        "https://fritzfixfit-backend-production.up.railway.app/logout"
+      );
       if (response.status === 200) {
         localStorage.setItem("username", "");
         setUsername("");
